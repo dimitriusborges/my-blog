@@ -2,7 +2,7 @@ import styles from "./Home.module.css"
 
 //directly import a JSON file into a list
 import posts from 'assets/json/posts.json'
-import Post from "components/Post";
+import PostCard from "components/PostCard";
 
 export default function Home(){
     return (
@@ -10,7 +10,7 @@ export default function Home(){
             {
                 posts.map((post) => (
                     <li key={post.id}>
-                        <Post post={post}/>
+                        <PostCard post={post}/>
                     </li>
                 ))
             }
